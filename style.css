@@ -39,12 +39,15 @@ h3 {
 
 .box {
   display: inline-block;
+  vertical-align: top;
   margin: 10px;
-  padding: 20px;
   width: 160px;
+  border-radius: 5px;
+}
+
+.box, .box a {
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
 }
 
 .box:hover {
@@ -66,6 +69,7 @@ h3 {
 
 .social .contact {
   background-color: #6cb8f1;
+  padding: 20px;
 }
 
 .social .contact:hover {
@@ -74,6 +78,7 @@ h3 {
 
 .social .connect {
   background-color: #62c293;
+  padding: 20px;
 }
 
 .social .connect:hover {
@@ -82,6 +87,7 @@ h3 {
 
 .social .critique {
   background-color: #424f5e;
+  padding: 20px;
 }
 
 .social .critique:hover {
@@ -90,6 +96,7 @@ h3 {
 
 .social .create {
   background-color: #ed5b65;
+  padding: 20px;
 }
 
 .social .create:hover {
@@ -105,10 +112,58 @@ h3 {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+  -webkit-transition:-webkit-transform 1s ease-in;
 }
 
-.transition .social .connect {
+.critique .back,
+.connect .back,
+.contact .back {
+  display:none;
+}
 
+.transition .critique .front,
+.transition .connect .front,
+.transition .contact .front {
+  display: none;
+}
+
+.transition .critique,
+.transition .connect,
+.transition .contact {
+  padding: 0;
+  width: 200px;
+}
+
+.transition .critique .back,
+.transition .connect .back,
+.transition .contact .back {
+  display: block;
+  height: 176px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 5px;
+   -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.transition .critique .back {
+  background: url(woodlogo5.png) no-repeat;
+}
+
+.transition .connect .back {
+  background: url(bucket.png) no-repeat;
+  background-color: #bdc3c7;
+}
+
+.transition .contact .back {
+  background: url(vinesflat.png) no-repeat;
+  background-size: 62%;
+  background-position: center;
+  background-color: #d0f2e9;
 }
 
 .footer {
