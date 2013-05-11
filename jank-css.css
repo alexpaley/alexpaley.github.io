@@ -1,0 +1,19 @@
+.flip .critique,
+.flip .connect {
+  -webkit-perspective: 600;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+
+  -webkit-backface-visibility: hidden;
+}
+
+.back .critique {
+  /*-webkit-backface-visibility: visible;*/
+  background: url('woodlogo4.png') no-repeat center center;
+}
+
+.back .connect {
+  -webkit-backface-visibility: visible;
+}

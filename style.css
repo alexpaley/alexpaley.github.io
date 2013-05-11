@@ -1,0 +1,232 @@
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  padding: 2.6em 0.5em;
+  color: #ed5b65;
+  text-align: center;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h1 .comment {
+  color: #424f5e;
+  display: none;
+}
+
+@media (min-width: 33em) {
+  h1 .comment {
+    display: inline;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.social {
+  text-align: center;
+}
+
+@media (min-width: 60em) {
+  .box-container {
+    display: inline;
+  }
+}
+
+.box {
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  width: 160px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.box:hover {
+  -webkit-animation: fadein_color 2s;
+  -moz-animation:    fadein_color 2s;
+  -o-animation:      fadein_color 2s;
+  animation:         fadein_color 2s;
+}
+
+.box i,
+.box h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+.box i {
+  font-size: 112px;
+}
+
+.social .contact {
+  background-color: #6cb8f1;
+}
+
+.social .contact:hover {
+  background-color: #333399;
+}
+
+.social .connect {
+  background-color: #62c293;
+}
+
+.social .connect:hover {
+  background-color: #1c6641;
+}
+
+.social .critique {
+  background-color: #424f5e;
+}
+
+.social .critique:hover {
+  background-color: #000;
+}
+
+.social .create {
+  background-color: #ed5b65;
+}
+
+.social .create:hover {
+  background-color: #d1000e;
+}
+
+.transition .social,
+.transition h3,
+.transition i {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.transition .social .connect {
+
+}
+
+.footer {
+  position: relative;
+  padding: 3em;
+  text-align: center;
+}
+
+.footer .big-sf {
+  display: none;
+}
+
+@media (min-width: 28.125em) {
+  .footer {
+    left: -1.3em;
+  }
+}
+
+@media (min-width: 30em) {
+  .footer .big-sf {
+    display: inline;
+  }
+
+  .footer .small-sf {
+    display: none;
+  }
+
+  .footer {
+    left: 2em;
+  }
+}
+
+.footer .icon-heart {
+  position: relative;
+  top: 0.25em;
+  color: #ed5b65;
+  font-size: 1.8em;
+}
+
+@-webkit-keyframes fadein_color {
+  0%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadein_color {
+  0%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadein_color {
+  0%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+@keyframes fadein_color {
+  0%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+.banner{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 149px;
+  width: 149px;
+  overflow:hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.banner a{
+  display: block;
+  width: 190px;
+  font-size: 13px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #333;
+  color: #FFF;
+  word-spacing: 2px;
+  text-decoration: none;
+  padding: 5px 15px 5px 25px;
+
+  position:relative;
+  left: 20px;
+  top: -37px;
+  text-align: center;
+
+  -moz-transform-origin: 0 0 ;
+  -moz-transform:rotate(45deg);
+  -moz-box-shadow:    1px 1px 5px 1px #666;
+
+  -o-transform-origin: 0 0 ;
+  -o-transform:rotate(45deg);
+  -o-box-shadow:    1px 1px 5px 1px #666;
+
+  -webkit-transform-origin: 0 0 ;
+  -webkit-transform:rotate(45deg);
+  -webkit-box-shadow: 1px 1px 5px 1px #666;
+
+  -ms-transform-origin: 0 0 ;
+  -ms-transform:rotate(45deg);
+  -ms-box-shadow: 1px 1px 5px 1px #666;
+
+  transform-origin: 0 0 ;
+  transform:rotate(45deg);
+  box-shadow: 1px 1px 5px 1px #666;
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.03, #ed5b65),
+    color-stop(0.05, #ed5b65),
+    color-stop(0.07, #ed5b65),
+    color-stop(0.93, #ed5b65),
+    color-stop(0.95, #ed5b65),
+    color-stop(0.97, #ed5b65)
+  );
+
+  background-image: -webkit-linear-gradient(bottom, #ed5b65 3%, #ed5b65 5%, #ed5b65 7%, #ed5b65 93%, #ed5b65 95%, #ed5b65 97%);
+  background-image: -ms-linear-gradient(bottom, #ed5b65 3%, #ed5b65 5%, #ed5b65 7%, #ed5b65 93%, #ed5b65 95%, #ed5b65 97%);
+  background-image: -moz-linear-gradient(bottom, #ed5b65 3%, #ed5b65 5%, #ed5b65 7%, #ed5b65 93%, #ed5b65 95%, #ed5b65 97%);
+  background-image: -o-linear-gradient(bottom, #ed5b65 3%, #ed5b65 5%, #ed5b65 7%, #ed5b65 93%, #ed5b65 95%, #ed5b65 97%);
+  background-image: linear-gradient(bottom, #ed5b65 3%, #ed5b65 5%, #ed5b65 7%, #ed5b65 93%, #ed5b65 95%, #ed5b65 97%);
+}
