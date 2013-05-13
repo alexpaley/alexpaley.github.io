@@ -5,7 +5,7 @@ var hasClassName = function(el, className) {
 var toggleClassName = function(el, className) {
 
   (function toggleText(tagName, position, text) {
-    var saved = "create";
+    var saved = "creations";
 
     if(!hasClassName(el, className)) {
       el.className += ' ' + className;
@@ -24,19 +24,3 @@ document.getElementById('create').addEventListener('click', function (e) {
   e.preventDefault();
   toggleClassName(document.getElementsByTagName('body')[0], 'transition');
 });
-
-// toggle to preserve original text
-// store original text
-// if class transition is on the element
-//   text = "my projects"
-// else
-//   text = "create"
-
-// var toggleText = function(el, className, text) {
-//   var element = document.getElementsByClassName('create');
-// }
-
-// var el = document.getElementsByTagName('h3')[3].innerHTML;
-
-// var element = document.getElementsByTagName('body');
-// document.getElementsByTagName('h3', element)[3].innerHTML;

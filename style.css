@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f4f4f4;
   margin: 0;
@@ -38,16 +42,21 @@ h3 {
 }
 
 .box {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   margin: 10px;
-  width: 160px;
-  border-radius: 5px;
+  width: 12.5em;
+  height: 11em;
 }
 
-.box, .box a {
+.box,
+.box-flip .front,
+.box-flip .back {
   color: #fff;
   text-decoration: none;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .box:hover {
@@ -64,103 +73,112 @@ h3 {
 }
 
 .box i {
-  font-size: 112px;
+  font-size: 7em;
 }
 
-.social .contact {
+.box-flip {
+  padding: 0;
+}
+
+.box-flip .front,
+.box-flip .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.box-flip .front {
+  z-index: 900;
+  -webkit-transform: rotateX(0);
+  -moz-transform: rotateX(0);
+  -o-transform: rotateX(0);
+  -ms-transform: rotateX(0);
+  transform: rotateX(0);
+}
+
+.transition .box-flip .front {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.social .contact .front {
   background-color: #6cb8f1;
-  padding: 20px;
 }
 
-.social .contact:hover {
+.social .contact:hover .front {
   background-color: #333399;
 }
 
-.social .connect {
+.social .connect .front {
   background-color: #62c293;
-  padding: 20px;
 }
 
-.social .connect:hover {
+.social .connect:hover .front {
   background-color: #1c6641;
 }
 
-.social .critique {
+.social .critique .front {
   background-color: #424f5e;
-  padding: 20px;
 }
 
-.social .critique:hover {
+.social .critique:hover .front {
   background-color: #000;
 }
 
 .social .create {
   background-color: #ed5b65;
-  padding: 20px;
 }
 
 .social .create:hover {
   background-color: #d1000e;
 }
 
-.transition .social,
-.transition h3,
-.transition i {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-  -webkit-transition:-webkit-transform 1s ease-in;
-}
-
-.critique .back,
-.connect .back,
-.contact .back {
-  display:none;
-}
-
-.transition .critique .front,
-.transition .connect .front,
-.transition .contact .front {
-  display: none;
-}
-
-.transition .critique,
-.transition .connect,
-.transition .contact {
-  padding: 0;
-  width: 200px;
-}
-
-.transition .critique .back,
-.transition .connect .back,
-.transition .contact .back {
-  display: block;
-  height: 176px;
-  width: 200px;
+.box-flip .back {
   background-size: cover;
-  border-radius: 5px;
-   -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
+  z-index: 800;
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
 }
 
-.transition .critique .back {
-  background: url(woodlogo5.png) no-repeat;
+.transition .box-flip .back {
+  z-index: 1000;
+  -webkit-transform: rotateX(0);
+  -moz-transform: rotateX(0);
+  -ms-transform: rotateX(0);
+  -o-transform: rotateX(0);
+  transform: rotateX(0);
 }
 
-.transition .connect .back {
-  background: url(bucket.png) no-repeat;
+.critique .back {
+  background: url(images/woodlogo5.png) no-repeat;
+}
+
+.connect .back {
+  background: url(images/bucket.png) no-repeat;
   background-color: #bdc3c7;
 }
 
-.transition .contact .back {
-  background: url(vinesflat.png) no-repeat;
+.contact .back {
+  background: url(images/vinesflat.png) no-repeat;
   background-size: 62%;
   background-position: center;
   background-color: #d0f2e9;
@@ -220,24 +238,24 @@ h3 {
   100% { opacity: 1; }
 }
 
-.banner{
+.banner {
   position: absolute;
   top: 0;
   right: 0;
   height: 149px;
   width: 149px;
-  overflow:hidden;
+  overflow: hidden;
   padding: 0;
   margin: 0;
 }
 
-.banner a{
+.banner a {
   display: block;
-  width: 190px;
+  width: 225px; /* Parent Height + (Parent Width)/2 */
   font-size: 13px;
   font-family: "Courier New", Courier, monospace;
   background-color: #333;
-  color: #FFF;
+  color: #fff;
   word-spacing: 2px;
   text-decoration: none;
   padding: 5px 15px 5px 25px;
