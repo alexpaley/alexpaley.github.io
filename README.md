@@ -1,4 +1,2 @@
-Personal-Site
-=============
 
-My personal site.
+Check me out at www.alexpaley.com!
