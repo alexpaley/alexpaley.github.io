@@ -13,8 +13,6 @@ var toggleClassName = function(el, className) {
       return;
     }
 
-    console.log(el.className);
-
     el.className = el.className.replace(new RegExp('\\s*' + className + '\\s*'), ' ');
     document.getElementsByTagName(tagName, el)[position].innerHTML = saved;
   })('h3', 3, "my projects");
