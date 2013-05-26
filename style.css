@@ -59,7 +59,8 @@ h3 {
   padding: 20px;
 }
 
-.box:hover {
+.box:hover,
+.resume:hover {
   -webkit-animation: fadein_color 2s;
   -moz-animation:    fadein_color 2s;
   -o-animation:      fadein_color 2s;
@@ -219,6 +220,21 @@ h3 {
   top: 0.25em;
   color: #ed5b65;
   font-size: 1.8em;
+}
+
+a.resume {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  color: white;
+  background-color: #ed5b65;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a.resume:hover {
+  background-color: #d1000e;
 }
 
 @-webkit-keyframes fadein_color {
