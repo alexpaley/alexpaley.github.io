@@ -52,14 +52,16 @@ h1 .comment {
 
 .email,
 .phone-number,
-.location {
+.location,
+.download {
   display: inline;
   margin-right: 20px;
 }
 
 .personal-info .icon-envelope-alt,
 .personal-info .icon-phone,
-.personal-info .icon-map-marker {
+.personal-info .icon-map-marker,
+.personal-info .icon-cloud-download {
   color: white;
   font-size: 1.5em;
 }
@@ -153,7 +155,7 @@ h1 .comment {
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-@media (min-width: 40em) {
+@media (min-width: 47em) {
   h1 .comment {
     display: inline;
   }
