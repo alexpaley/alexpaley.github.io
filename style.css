@@ -14,6 +14,7 @@ h1 {
   text-align: center;
   font-size: 2em;
   font-weight: normal;
+  text-transform: lowercase;
 }
 
 h1 .comment {
@@ -71,6 +72,7 @@ h3 {
 .box h3 {
   line-height: 1;
   margin: 0;
+  text-transform: lowercase;
 }
 
 .box i {
