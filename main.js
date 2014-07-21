@@ -3,7 +3,6 @@ var hasClassName = function(el, className) {
 };
 
 var toggleClassName = function(el, className) {
-
   (function toggleText(tagName, position, text) {
     var saved = "creations";
 
@@ -15,7 +14,7 @@ var toggleClassName = function(el, className) {
 
     el.className = el.className.replace(new RegExp('\\s*' + className + '\\s*'), ' ');
     document.getElementsByTagName(tagName, el)[position].innerHTML = saved;
-  })('h3', 3, "projects");
+  })('h3', 3, 'projects');
 };
 
 document.getElementById('create').addEventListener('click', function (e) {
