@@ -70,13 +70,13 @@ h3 {
 
 .box i,
 .box h3 {
-  line-height: 1;
+  line-height: 1.1;
   margin: 0;
   text-transform: lowercase;
 }
 
 .box i {
-  font-size: 7em;
+  font-size: 6em;
 }
 
 .box-flip {
