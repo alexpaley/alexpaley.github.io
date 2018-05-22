@@ -16,8 +16,3 @@ var toggleClassName = function(el, className) {
     document.getElementsByTagName(tagName, el)[position].innerHTML = saved;
   })('h3', 3, 'projects');
 };
-
-document.getElementById('create').addEventListener('click', function (e) {
-  e.preventDefault();
-  toggleClassName(document.getElementsByTagName('body')[0], 'transition');
-});

@@ -1,1 +1,1 @@
-Check me out at www.alexpaley.com!
+www.alexpaley.com
